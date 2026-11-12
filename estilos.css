@@ -5,12 +5,14 @@
   --navy-deep: #0E1A26;
   --cream: #F3EFE6;
   --cream-dark: #E7E1D4;
-  --paper: #FAF8F3;
+  --paper: #FFFCF6;
   --ink: #1A1C1B;
   --muted: #3F4642;
   --bronze: #B0894F;
   --bronze-dark: #7A5A32;
-  --line: #D5CFC2;
+  --line: #E4D3AE;
+  --body-bg: #FFF8EE;
+  --section-alt: #F6EBD4;
   --link: #16496A;
   --link-hover: #0C3148;
   --focus: #0C3148;
@@ -56,7 +58,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--ink);
-  background: var(--cream);
+  background: var(--body-bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -250,6 +252,10 @@ main {
   padding: 3.25rem 0;
 }
 
+.section:nth-of-type(even) {
+  background: var(--section-alt);
+}
+
 .section + .section {
   border-top: 1px solid var(--line);
 }
@@ -368,6 +374,7 @@ main {
 .card {
   background: var(--paper);
   border: 1px solid var(--line);
+  border-top: 3px solid var(--bronze);
   padding: 1.35rem 1.3rem 1.45rem;
   display: flex;
   flex-direction: column;
@@ -424,6 +431,7 @@ main {
 .contact-list li {
   background: var(--paper);
   border: 1px solid var(--line);
+  border-left: 3px solid var(--bronze);
   padding: 1rem 1.15rem;
   display: grid;
   gap: 0.2rem;
@@ -533,6 +541,7 @@ main {
   font-weight: 600;
   font-size: 0.95rem;
   border: 2px solid var(--navy);
+  box-shadow: inset 0 -3px 0 var(--bronze);
 }
 
 .button:hover {
