@@ -268,7 +268,7 @@ main {
 
 @media (min-width: 48rem) {
   .section-head {
-    grid-template-columns: 8rem 1fr;
+    grid-template-columns: 9rem 1fr;
     align-items: baseline;
     gap: 1.5rem;
     margin-bottom: 2.25rem;
