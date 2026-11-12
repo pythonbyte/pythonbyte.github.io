@@ -394,6 +394,16 @@ main {
 .card p {
   margin: 0;
   color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card p.card-label,
+.card p.status {
+  flex: none;
+}
+
+.card h3 + p {
   flex: 1;
 }
 
@@ -415,6 +425,19 @@ main {
   color: var(--navy);
   border-top: 1px solid var(--line);
   padding-top: 0.7rem;
+}
+
+@media (min-width: 48rem) {
+  /* Alinha rótulo, título, texto e rodapé entre os cards da mesma linha */
+  .card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: 0.65rem;
+  }
+  .card .status {
+    align-self: end;
+  }
 }
 
 /* Contact */
